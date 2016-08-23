@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script type ="text/javascript">
+
+		var answer = parseInt(Math.random() * 100);
+		
+		for( var i = 5; i > 0; i--){
+
+			var number = parseInt(prompt("Введите ваш вариант ответа. У вас есть " + i + " попыток"));
+
+
+			if(number == answer){
+				alert("Вы угадали");
+				break;
+			} else if(number < answer){
+				alert("Выше число слишком маленькое");
+			} else if(number > answer){
+				alert("Ваше число слишком большое");
+			}
+		}		
+	
+	</script>
+
+
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="question.html">Вопросы</a><span>/</span>
+		<a href="guess.html">Угадайка</a><span>/</span>
+		<a href="multigues.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+
+	<div id="content">
+		<h1> Игра угадайка</h1>
+
+			<div id="box">
+				<h2>Компьютер загадал число. А вы должны его угадать, на это у вас есть 5 попыток.</h2>
+
+				<a href ="#"> Начать</a>
+
+	        </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

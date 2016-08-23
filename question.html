@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вопросики</title>
+	<meta charset = "utf-8">
+	<link rel ="stylesheet" href ="style.css">
+	
+	<script type="text/javascript">
+
+
+			function checkAnswer(id,trueAnswer)
+				{
+				var userAnswer = document.getElementById(id).value;
+				if(userAnswer == trueAnswer)
+					return true;
+				else
+					return false;
+				}
+
+			function checkAnswers() {
+				var goodAnswers = 0;
+				
+				if(checkAnswer('question1', 'ученый')==true) goodAnswers++;
+				if(checkAnswer('question2', 'уран')) goodAnswers++;
+				if(checkAnswer('question3', 'романов')) goodAnswers++;
+
+				if (goodAnswers == 0) alert('Вы ничего не угадали');
+				else alert('количество правильных ответов:' + goodAnswers);
+				}
+
+
+
+	</script>
+</head>
+<body>
+
+<div id ="header">
+		<a href ="index.html"> Главная </a><span>/</span>	
+		<a href ="question.html"> Вопросы </a><span>/</span>
+		<a href ="guess.html"> Угадайка </a><span>/</span>
+		<a href ="multigues.html"> Угадайка мультиплеер </a>
+	</div>
+
+	<div id="content">
+		<h1>Вопросы</h1>
+		
+			<div id="box">
+				<h2>Вас ждет четыре вопроса. Попробуйте на них ответить!
+				</h2>
+
+				</br></br></br>
+
+				<p>Кто такой Стивен Хокинг?</p>
+				<input type ="text" id=question1 />
+
+				<p>Самая холодная планета в Солнечной системе?</p>
+				<input type ="text" id=question2 />
+
+				<p>Какая была фамилия у Петра 1?</p>
+				<input type ="text" id=question3 />
+				
+
+				</br></br></br>
+
+				<input type = "button" value = "Ответить"
+         onclick = "checkAnswers()" />
+			</div>
+		
+	</div>
+			
+	
+</body>
+</html>
